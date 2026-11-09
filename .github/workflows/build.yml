@@ -53,6 +53,7 @@ jobs:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         run: |
           set -euo pipefail
+          
 
           mkdir -p "$HOME/.kube"
           printf '%s\n' "$KUBE_CONFIG" > "$HOME/.kube/config"
